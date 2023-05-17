@@ -8,7 +8,7 @@ class Balle(pygame.sprite.Sprite): #la balle qui rebondit
         self.x = x
         self.y = y
         self.game = game
-        self.vitesse = 5
+        self.vitesse = 7
         self.isDown = True #si la balle descend
         self.image = pygame.image.load("img/balle.png").convert_alpha()
         self.image = pygame.transform.scale_by(self.image,1/10)

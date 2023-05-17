@@ -8,6 +8,7 @@ class Player(pygame.sprite.Sprite): #la plateforme
         self.y = 600
         self.hp = 10
         self.maxHp = 10
+        self.vitesse = 7
         self.image = pygame.image.load("PygameAssets/horizontal.png").convert_alpha()
         self.image = pygame.transform.scale_by(self.image,1/8)
         self.rect = self.image.get_rect(topleft = (self.x,self.y))
@@ -19,7 +20,7 @@ class Player(pygame.sprite.Sprite): #la plateforme
             self.kill()
 
     def move_right(self):
-        self.rect.x += 5
+        self.rect.x += self.vitesse
 
     def move_left(self):
-        self.rect.x -= 5
+        self.rect.x -= self.vitesse
